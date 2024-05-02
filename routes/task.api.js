@@ -1,14 +1,15 @@
 //task에 관련된 api는 여기에서 관리하겠다.
 const express = require('express');
+
 const taskController = require('../controller/task.controller');
 const router = express.Router();
 
 /////////////////////////////////////////////////
 //강의는 없지만 이부분을 추가해주어야 미들웨어로 인식되어 index.js의 router.use('/tasks', taskApi); 가 정상적을 인식됨.
-router.use((req, res, next) => {
-    console.log('middleware for posts!');
-    next();
-  });
+// router.use((req, res, next) => {
+//     console.log('middleware for posts!');
+//     next();
+//   });
 /////////////////////////////////////////////////
 
 // router.post('/',(req,res)=>{
