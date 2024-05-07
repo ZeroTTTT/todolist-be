@@ -2,7 +2,9 @@
 const express = require('express');
 
 const taskController = require('../controller/task.controller');
+const authController = require('../controller/auth.controller')
 const router = express.Router();
+
 
 /////////////////////////////////////////////////
 //강의는 없지만 이부분을 추가해주어야 미들웨어로 인식되어 index.js의 router.use('/tasks', taskApi); 가 정상적을 인식됨.
@@ -15,7 +17,7 @@ const router = express.Router();
 // router.post('/',(req,res)=>{
 //     res.send('create task');
 // });
-router.post('/', taskController.createTask);
+router.post('/', authController.authenticate,  taskController.createTask);
 
 // router.get('/',(req,res)=>{
 //     res.send('get task');
