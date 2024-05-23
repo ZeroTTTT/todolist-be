@@ -1,7 +1,7 @@
 // const User = require('../model/User')
 // const User = require('../model/User')
 const User = require('../model/User')
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcryptjs')
 const saltRounds = 10;
 
 const userController = {}; // {} 객체 

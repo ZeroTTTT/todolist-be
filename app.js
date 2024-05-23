@@ -29,6 +29,9 @@ mongoose
     app.listen(process.env.PORT || 5000, ()=>{
         console.log('server on 5000');
     });
+    // app.listen(8080, ()=>{
+    //     console.log('server on 8080');
+    // });
     
     //1. 회원가입
     // 유저가 이메일, 패스워드, 유저이름 입력해서 보냄
